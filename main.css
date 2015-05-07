@@ -1,0 +1,149 @@
+.nav a{
+    color:dimgrey;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav .container{
+     margin-left: 10px;
+}
+
+.jumbotron{
+    background-image:url('http://i.imgur.com/l2VU4bH.jpg');
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron h1{
+    font-size: 90px;
+    color: darkorange;
+      text-shadow:
+   -2px 2px 0 #000,  
+    -1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.jumbotron .container{
+    margin-left: 25px;
+    margin-top: -45px;
+}
+
+.col-centered h3{
+    text-align: center;
+    color:dimgrey;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* Initial menu */
+.menu {
+  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+/* Basic styling */
+
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
+#project-box{
+    border: 3px solid #636366;
+}
+
+.description-row{
+    display: none;
+}
+
+.description-row h1{
+    text-align: center;
+    color:dimgrey;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.description-row p{
+    text-align: center;
+    color:dimgrey;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 70%;
+  min-height: 70%;
+}
+
+
