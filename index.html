@@ -11,73 +11,57 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Murray Studio</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse" class="pull-right">
-                <ul class="nav navbar-nav" >
-                    <li class="active"><a href="#">Home</a>
-                    </li>
-                    <li><a href="#">About</a>
-                    </li>
-                    <li><a href="#">Contact</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a>
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a>
                             </li>
-                            <li><a href="#">Another action</a>
+                            <li><a href="#about">About</a>
                             </li>
-                            <li><a href="#">Something else here</a>
+                            <li><a href="#contact">Contact</a>
                             </li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a>
-                            </li>
-                            <li><a href="#">One more separated link</a>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Nav header</li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                    <li><a href="#">One more separated link</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </nav>
+
         </div>
-        <!--/.container-fluid -->
-    </nav>
-
-    <div class="menu">
-
-        <!-- Menu icon -->
-        <div class="icon-close">
-            <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
-        </div>
-
-        <!-- Menu -->
-        <ul>
-            <li><a href="#">About</a>
-            </li>
-            <li><a href="#">Blog</a>
-            </li>
-            <li><a href="#">Help</a>
-            </li>
-            <li><a href="#">Contact</a>
-            </li>
-        </ul>
     </div>
 
 
@@ -126,85 +110,78 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
-    <!-- Carousel -->
+    <!-- END Carousel -->
 
-    <div class="info">
-        <div class="info-container">
-            <div class="info-row">
-                <div class="col-lg-3 col-centered">
-                    <div class="about">
-                        <h3>About</h3>
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="first-featurette">
+                <div class="col-md-7">
+                    <a class="featurette-heading" href="#">Projects.</a>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    <p class="project-list">See Projects.</p>
+                    <div id="object" class="slideUp">
+                        <div id="object" class="slideDownEdit">
+                            <div id="project-box">
+                                <a>Embraer adds third Legacy 500 prototype to flight test campaign</a>
+                                <hr class="featurette-divider" id="project-divider">
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+                                <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-centered">
-                    <div class="project">
-                        <h3>Projects</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-centered">
-                    <div class="conact">
-                        <h3>Contact</h3>
-                    </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-responsive center-block" src="http://a1.dspnimg.com/data/l/423341110329_Qy737Vid_l.jpg" alt="Generic placeholder image">
                 </div>
             </div>
-            <div class="description-row">
-                <div class="col-xs-3">&nbsp;</div>
-                <div class="col-xs-6">
-                    <div id="project-box">
-                        <h1>Embraer adds third Legacy 500 prototype to flight test campaign</h1>
-                        <p>The third Legacy 500 has joined Embraer's flight test programme aimed at delivering the midsize business jet in 2014. The airtcraft, serial number 003...</p>
-                    </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="second-featurette">
+                <div class="col-md-7 col-md-push-5">
+                    <a class="featurette-heading" href="#">About Me.</a>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                 </div>
-                <div class="col-xs-3">&nbsp;</div>
+                <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-responsive center-block" src="http://coolvectors.com/images/vect/2009/07/500x500.jpg" alt="Generic placeholder image">
+                </div>
+
             </div>
         </div>
-    </div>
 
-    <!-- START THE FEATURETTES -->
+        <hr class="featurette-divider">
 
-    <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="third-featurette">
+                <div class="col-md-7">
+                    <a class="featurette-heading" href="#">Contact</a>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-responsive center-block" src="http://img.ffffound.com/static-data/assets/6/0e631388459950a0aa0a0681e97db18640af4617_m.jpg" alt="Generic placeholder image">
+                </div>
 
-    <div class="row featurette">
-        <div class="first-featurette">
-            <div class="col-md-7">
-                <a class="featurette-heading"  href="#">Projects.</a>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" src="http://a1.dspnimg.com/data/l/423341110329_Qy737Vid_l.jpg" alt="Generic placeholder image">
-            </div>
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="second-featurette">
-            <div class="col-md-7 col-md-push-5">
-                <a class="featurette-heading"  href="#">About Me.</a>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5 col-md-pull-7">
-                <img class="featurette-image img-responsive center-block" src="http://coolvectors.com/images/vect/2009/07/500x500.jpg" alt="Generic placeholder image">
             </div>
         </div>
+
+        <hr class="featurette-divider">
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="third-featurette">
-            <div class="col-md-7">
-                <a class="featurette-heading"  href="#">Contact</a>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" src="http://img.ffffound.com/static-data/assets/6/0e631388459950a0aa0a0681e97db18640af4617_m.jpg" alt="Generic placeholder image">
-            </div>
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->
 
@@ -218,7 +195,7 @@
         </div>
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 </body>

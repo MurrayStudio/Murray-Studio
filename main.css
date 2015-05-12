@@ -1,128 +1,85 @@
 .navbar {
-    margin-bottom: 0px;
-    border-bottom: .5px solid white;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    margin-top: 5px;
-    background-color: transparent;
-    height: 80px;
-    z-index: 20;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
+    z-index: 20;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+    display: inline-block;
 }
 
-#navbar a {
-    margin-top: 10px;
-    padding-right: 100px;
-    font-size: 16px;
-    color: white;
-    right: -200px;
-    position: relative;
-}
+#navbar a {}
 
-.navbar-default .navbar-brand {
-    color: white;
-}
-
-.navbar-brand {
-    font-size: 65px;
-    margin-top: 10px;
-    margin-right: 480px;
-    color: darkred;
-}
+.navbar-default .navbar-brand {}
 
 #navbar li.active a {
     background-color: transparent;
 }
+/* Flip around the padding for proper display in narrow viewports */
 
-.col-centered h3 {
-    text-align: center;
-    color: dimgrey;
-    font-size: 28px;
-    cursor: pointer;
-}
-/* Initial menu */
-
-.menu {
-    background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-    left: -285px;
-    /* start off behind the scenes */
-    
-    height: 100%;
-    position: fixed;
-    width: 285px;
-}
-/* Basic styling */
-
-.menu ul {
-    border-top: 1px solid #636366;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar-wrapper > .container {
+    padding-right: 0;
+    padding-left: 0;
 }
 
-.menu li {
-    border-bottom: 1px solid #636366;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 45px;
-    padding-bottom: 3px;
-    padding-left: 20px;
-    padding-top: 3px;
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-.menu a {
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
+.navbar-wrapper .navbar .container {
+    width: auto;
 }
 
-.icon-close {
-    cursor: pointer;
-    padding-left: 10px;
-    padding-top: 10px;
+/* Exit Animation
+-------------------------------------------------- */
+
+.slideDownEdit{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: hidden !important;						
 }
 
-.icon-menu {
-    color: #fff;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-top: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
 }
 
-.icon-menu i {
-    margin-right: 5px;
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(0%);
+	}		
+	100% {
+		-webkit-transform: translateY(500%);
+        visibility: hidden;
+	}	
 }
 
-#project-box {
-    border: 3px solid #636366;
-}
-
-.description-row {
-    display: none;
-}
-
-.description-row h1 {
-    text-align: center;
-    color: dimgrey;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.description-row p {
-    text-align: center;
-    color: dimgrey;
-    font-size: 20px;
-    cursor: pointer;
-}
 /* Footer
 -------------------------------------------------- */
 
@@ -161,7 +118,6 @@
 
 .carousel {
     height: 650px;
-    margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 
@@ -178,6 +134,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    min-width: 100%;
+    height: 900px;
+    max-width: none;
 }
 
 .carousel-caption p {
@@ -192,67 +151,63 @@
     margin: 80px 0;
     /* Space out the Bootstrap <hr> more */
 }
+
 /* Thin out the marketing headings */
 
 .featurette-heading {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
+    margin-top: 120px;
     font-size: 50px;
+    display: inline-block;
 }
 
-.lead {
-    letter-spacing: -1px;
-    font-size: 25px;
+/* Project Box 
+------------------------- */
+
+#project-box {
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid #636366;
+    cursor: pointer;
+    width: 75%;
+    margin: auto;
+    visibility: hidden;
 }
 
-.first-featurette a {
+#project-divider.featurette-divider{
+    margin: 10px 0;
+}
+
+#project-box a {
+    font-size: 30px;
     margin-left: 300px;
-    margin-top: 120px;
-    padding-right: 100px;
+    margin-right: 100px;
     color: darkred;
     display: block;
+    margin: auto;
 }
 
-.first-featurette p {
-    margin-left: 300px;
-    padding-right: 100px;
+#project-box p {
+    font-size: 20px;
+    color: dimgrey;
 }
 
-.first-featurette img {
-    margin-right: 300px;
-}
-
-.second-featurette a {
-    margin-right: 300px;
-    padding-left: 100px;
-    margin-top: 120px;
-    display: block;
+.project-list {
+    cursor: pointer;
     color: darkred;
 }
 
-.second-featurette p {
-    margin-right: 300px;
-    padding-left: 100px;
+.slider {
+	overflow-y: scroll;
+	max-height: 500px; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
-.second-featurette img {
-    margin-left: 300px;
-}
-
-.third-featurette a {
-    margin-left: 300px;
-    margin-top: 120px;
-    padding-right: 100px;
-    color: darkred;
-    display: block;
-}
-
-.third-featurette p {
-    margin-left: 300px;
-    padding-right: 100px;
-}
-
-.third-featurette img {
-    margin-right: 300px;
+.slider.closed {
+	max-height: 0;
 }
