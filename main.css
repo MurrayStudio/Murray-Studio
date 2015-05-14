@@ -145,7 +145,7 @@ body {
     /* Set the fixed height of the footer here */
     
     height: 60px;
-    border: 1px solid grey;
+    border-top: 1px solid rgba(0, 0, 0, .2);
 }
 
 .footer p {
@@ -191,7 +191,7 @@ body {
     top: 0;
     left: 0;
     min-width: 100%;
-    height: 900px;
+    height: 650px;
     max-width: none;
 }
 
@@ -200,37 +200,66 @@ body {
     font-size: 21px;
     line-height: 1.4;
 }
+
+.carousel-control.left {
+      background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
+
+.carousel-control.right {
+      background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
 /* Featurettes
 ------------------------- */
 
-.first-col7{
+#row-1 {
+    background-color: #FAFAFA;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+#row-2 {
+    background-color: #F4F4F4;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+#row-3 {
+    background-color: #FAFAFA;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.first-col7 {
     visibility: hidden;
 }
 
-.first-col5{
+.first-col5 {
     visibility: hidden;
 }
 
-.second-col7{
+.second-col7 {
     visibility: hidden;
 }
 
-.second-col5{
+.second-col5 {
     visibility: hidden;
 }
 
-.third-col7{
+.third-col7 {
     visibility: hidden;
 }
 
-.third-col5{
+.third-col5 {
     visibility: hidden;
 }
 
 .featurette-divider {
-    margin: 80px 0;
     border: 1px solid #555555;
     opacity: .2;
+    visibility: hidden;
     /* Space out the Bootstrap <hr> more */
 }
 /* Thin out the marketing headings */
