@@ -20,6 +20,11 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
+.logo{
+    float: left;
+     padding-top: 9px;
+}
+
 #navbar a {
     font-size: 18px;
     padding: 30px;
@@ -31,11 +36,12 @@ body {
     padding: 30px;
     padding-left: 40px;
     position: relative;
+    float: right;
     font-family: 'NovecentowideLightBold', 'Source Sans Pro', sans-serif;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #61e69d !important;
+    color: #f46902 !important;
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -ms-transition: color 0.2s ease;
@@ -44,7 +50,7 @@ body {
 }
 
 #navbar a:hover {
-    color: #61e69d !important;
+    color: #f46902 !important;
     -webkit-transition: color 0.2s ease;
     -moz-transition: color 0.2s ease;
     -ms-transition: color 0.2s ease;
