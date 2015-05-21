@@ -74,6 +74,50 @@ slideDown
 	}	
 }
 
+/* Slide Down Exit Animation
+-------------------------------------------------- */
+
+.slideDownEdit {
+    animation-name: slideDown;
+    -webkit-animation-name: slideDown;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    visibility: hidden !important;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(8%);
+    }
+    65% {
+        transform: translateY(-4%);
+    }
+    80% {
+        transform: translateY(4%);
+    }
+    95% {
+        transform: translateY(-2%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slideDown {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    100% {
+        -webkit-transform: translateY(500%);
+        visibility: hidden;
+    }
+}
+
 /*
 ==============================================
 slideUp

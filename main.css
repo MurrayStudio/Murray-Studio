@@ -98,54 +98,11 @@ body {
         padding-left: 20px;
     }
 }
-/* Exit Animation
--------------------------------------------------- */
-
-.slideDownEdit {
-    animation-name: slideDown;
-    -webkit-animation-name: slideDown;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    animation-timing-function: ease;
-    -webkit-animation-timing-function: ease;
-    visibility: hidden !important;
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-    }
-    50% {
-        transform: translateY(8%);
-    }
-    65% {
-        transform: translateY(-4%);
-    }
-    80% {
-        transform: translateY(4%);
-    }
-    95% {
-        transform: translateY(-2%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-@-webkit-keyframes slideDown {
-    0% {
-        -webkit-transform: translateY(0%);
-    }
-    100% {
-        -webkit-transform: translateY(500%);
-        visibility: hidden;
-    }
-}
 /* Footer
 -------------------------------------------------- */
 
 .footer {
-    background-color: #dddee1;
+    background-color: #F4F4F4;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
@@ -238,25 +195,133 @@ body {
     border-top: 1px solid rgba(0, 0, 0, .2);
 }
 
-.first-col7 {
-    visibility: hidden;
-}
+.first-col7 {}
+/* 1st image */
 
 .first-col5 {
     visibility: hidden;
 }
 
-.second-col7 {
-    visibility: hidden;
+.effects .first-image {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
 }
+
+.effects {
+    width: 500px;
+}
+
+.effects .first-image img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+}
+/* ============================================================
+  EFFECT 5 - ICON BORDER ANIMATE
+============================================================ */
+
+#effect-1 .overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+#effect-1 .overlay a.expand {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+    border-radius: 500px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#effect-1 .first-image:hover .overlay {
+    opacity: 1;
+}
+
+#effect-1 .first-image:hover .overlay a.expand {
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    -ms-border-radius: 120px;
+    -o-border-radius: 120px;
+    border-radius: 120px;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: all 0.5s;
+    border-radius: 500px;
+}
+
+a.expand {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 90px;
+    height: 90px;
+    margin-top: 50px;
+    border: solid 5px #fff;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 100px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+a.close-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+    background-color: #000;
+    cursor: pointer;
+    border-radius: 500px;
+}
+
+a.close-overlay.hidden {
+    display: none;
+}
+
+.second-col7 {}
+/* 2nd image */
 
 .second-col5 {
     visibility: hidden;
 }
 
-.third-col7 {
-    visibility: hidden;
-}
+.third-col7 {}
+/* 3rd image */
 
 .third-col5 {
     visibility: hidden;
@@ -272,11 +337,18 @@ body {
 
 .featurette-heading {
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.3;
     letter-spacing: -1px;
     margin-top: 120px;
-    font-size: 50px;
+    font-size: 60px;
     display: inline-block;
+    color: #555555;
+}
+
+.featurette-heading:hover {
+    font-weight: 350;
+    text-decoration: none;
+    color: #f46902
 }
 /* Project Box 
 ------------------------- */

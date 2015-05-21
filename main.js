@@ -162,61 +162,91 @@ var main = function () {
         //            }
         //        });
 
-        $('.first-col7').each(function () {
+//        $('.first-col7').each(function () {
+//            var imagePos2 = $(this).offset().top;
+//
+//            var topOfWindow = $(window).scrollTop();
+//            if (imagePos2 < topOfWindow + 500) {
+//                $('.first-col7').addClass("fadeIn");
+//            }
+//        });
+
+        $('.first-image').each(function () {
             var imagePos2 = $(this).offset().top;
 
             var topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
-                $('.first-col7').addClass("fadeIn");
+                $('.first-image').addClass("slideLeft");
             }
         });
 
-        $('.first-col5').each(function () {
-            var imagePos2 = $(this).offset().top;
-
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('.first-col5').addClass("fadeIn");
-            }
-        });
-
-        $('.second-col7').each(function () {
-            var imagePos2 = $(this).offset().top;
-
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('.second-col7').addClass("fadeIn");
-            }
-        });
+//        $('.second-col7').each(function () {
+//            var imagePos2 = $(this).offset().top;
+//
+//            var topOfWindow = $(window).scrollTop();
+//            if (imagePos2 < topOfWindow + 500) {
+//                $('.second-col7').addClass("fadeIn");
+//            }
+//        });
 
         $('.second-col5').each(function () {
             var imagePos2 = $(this).offset().top;
 
             var topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
-                $('.second-col5').addClass("fadeIn");
+                $('.second-col5').addClass("slideRight");
             }
         });
 
-        $('.third-col7').each(function () {
-            var imagePos2 = $(this).offset().top;
-
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('.third-col7').addClass("fadeIn");
-            }
-        });
+//        $('.third-col7').each(function () {
+//            var imagePos2 = $(this).offset().top;
+//
+//            var topOfWindow = $(window).scrollTop();
+//            if (imagePos2 < topOfWindow + 500) {
+//                $('.third-col7').addClass("fadeIn");
+//            }
+//        });
 
         $('.third-col5').each(function () {
             var imagePos2 = $(this).offset().top;
 
             var topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
-                $('.third-col5').addClass("fadeIn");
+                $('.third-col5').addClass("slideLeft");
             }
         });
 
     });
+    
+    $(document).ready(function(){
+    if (Modernizr.touch) {
+        // show the close overlay button
+        $(".close-overlay").removeClass("hidden");
+        // handle the adding of hover class when clicked
+        $(".first-image").click(function(e){
+            if (!$(this).hasClass("hover")) {
+                $(this).addClass("hover");
+            }
+        });
+        // handle the closing of the overlay
+        $(".close-overlay").click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if ($(this).closest(".first-image").hasClass("hover")) {
+                $(this).closest(".first-image").removeClass("hover");
+            }
+        });
+    } else {
+        // handle the mouseenter functionality
+        $(".first-image").mouseenter(function(){
+            $(this).addClass("hover");
+        })
+        // handle the mouseleave functionality
+        .mouseleave(function(){
+            $(this).removeClass("hover");
+        });
+    }
+});
 
     //$('#carousel').carousel('cycle');
 }
