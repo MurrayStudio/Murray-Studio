@@ -130,7 +130,6 @@ body {
     margin-top: 10px;
     right: 10%;
 }
-
 /* Featurettes
 ------------------------- */
 
@@ -139,6 +138,7 @@ body {
     padding-bottom: 80px;
     padding-top: 80px;
     border-top: 1px solid rgba(0, 0, 0, .2);
+    margin-top: 80px;
 }
 
 #row-2 {
@@ -354,16 +354,16 @@ body {
     display: block;
     position: absolute;
     z-index: 100;
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     margin-top: 50px;
     border: solid 5px #fff;
     text-align: center;
     vertical-align: middle;
     color: #fff;
-    line-height: 100px;
+    line-height: 50px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 a.close-overlay {
@@ -412,8 +412,13 @@ a.close-overlay.hidden {
     color: #f46902
 }
 
-#imageGallery{
+#imageGallery {
     margin-top: 50px;
+    display: none;
     visibility: hidden;
 }
 
+#gallery-heading {
+    display: none;
+    visibility: hidden;
+}

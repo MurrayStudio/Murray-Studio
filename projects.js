@@ -1,46 +1,50 @@
 var main = function () {
 
     var shown = false;
+    var delay = 0;
 
-    //    var enabled = false;
-    //    var scrolled = false;
-    //    $('#project-box').hide();
-    //
-    //    $('.project-list').click(function () {
-    //        debugger;
-    //        if (enabled == false) {
-    //            $('#project-box').addClass("slideUp2");
-    //            $('#project-box').removeClass("slideDown");
-    //            enabled = true;
-    //            $('#project-box').show();
-    //
-    //        } else {
-    //            $('#project-box').removeClass("slideUp2");
-    //            $('#project-box').addClass("slideDown");
-    //            enabled = false;
-    //
-    //            $("#project-box").on('webkitAnimationEnd', function () {
-    //                if (enabled == false) {
-    //                    $('#project-box').hide();
-    //                }
-    //            });
-    //        }
-    //    });
+    //    the ability to change the icon arrow for the gallery can be done by switching out image file in source folder
+    $('#imageGallery').justifiedGallery({
+        rowHeight: 230,
+        maxRowHeight: 0,
+        minRowHeight: 210,
+        lastRow: 'nojustify',
+        rel: 'gallery1',
+        margins: 2,
+        sizeRangeSuffixes: {
+            lt100: '_t',
+            lt240: '_m',
+            lt320: '_n',
+            lt500: '',
+            lt640: '_z',
+            lt1024: '_b'
+        }
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: 0.8,
+            transition: 'elastic',
+            current: ''
+        });
+    });
 
-    //    $(window).scroll(function () {
-    //        $('#project-box').each(function () {
-    //            var imagePos = $(this).offset().top;
-    //
-    //            var topOfWindow = $(window).scrollTop();
-    //            if (imagePos < topOfWindow + 400 && scrolled == false) {
-    //                $('#project-box').addClass("slideUp2");
-    //                $('#project-box').show();
-    //                $('#project-box').removeClass("slideDown");
-    //                enabled = true;
-    //                scrolled = true;
-    //            }
-    //        });
-    //    });
+    $('#graphic-design-gallery.expand').click(function () {
+        $("#third-row.row.featurette").hide("slow");
+
+        $('#imageGallery').show();
+
+        $('#gallery-heading').show();
+        $('#gallery-heading').addClass('fadeIn');
+
+        $('#imageGallery a').each(function () {
+            var $a = $(this);
+            setTimeout(function () {
+                $a.addClass('fadeIn');
+            }, delay += 300); // delay 100 ms
+            //}
+        });
+    });
 
     $(window).scroll(function () {
 
@@ -149,19 +153,6 @@ var main = function () {
             shown = true;
         }
 
-        //        $('#project-box').each(function () {
-        //            var imagePos = $(this).offset().top;
-        //
-        //            var topOfWindow = $(window).scrollTop();
-        //            if (imagePos < topOfWindow + 500) {
-        //                $('#project-box').addClass("slideUp2");
-        //                //                $('#project-box').show();
-        //                //                $('#project-box').removeClass("slideDown");
-        //                //                enabled = true;
-        //                //                scrolled = true;
-        //            }
-        //        });
-
         $('#first.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
@@ -189,14 +180,6 @@ var main = function () {
             }
         });
 
-        $('#imageGallery').each(function () {
-            var imagePos2 = $(this).offset().top;
-
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('#imageGallery').addClass("slideUp");
-            }
-        });
 
     });
 
@@ -229,32 +212,6 @@ var main = function () {
                     });
             }
         });*/
-
-    //    the ability to change the icon arrow for the gallery can be done by switching out image file in source folder
-    $('#imageGallery').justifiedGallery({
-        rowHeight: 230,
-        maxRowHeight: 0,
-        minRowHeight: 210,
-        lastRow: 'nojustify',
-        rel: 'gallery1',
-        margins: 2,
-        sizeRangeSuffixes: {
-            lt100: '_t',
-            lt240: '_m',
-            lt320: '_n',
-            lt500: '',
-            lt640: '_z',
-            lt1024: '_b'
-        }
-    }).on('jg.complete', function () {
-        $(this).find('a').colorbox({
-            maxWidth: '80%',
-            maxHeight: '80%',
-            opacity: 0.8,
-            transition: 'elastic',
-            current: ''
-        });
-    });
 
 }
 
