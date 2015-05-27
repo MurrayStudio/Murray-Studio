@@ -189,38 +189,73 @@ var main = function () {
             }
         });
 
+        $('#imageGallery').each(function () {
+            var imagePos2 = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos2 < topOfWindow + 500) {
+                $('#imageGallery').addClass("slideUp");
+            }
+        });
+
     });
-    
-/*    $(document).ready(function(){
-    if (Modernizr.touch) {
-        // show the close overlay button
-        $(".close-overlay").removeClass("hidden");
-        // handle the adding of hover class when clicked
-        $(".first-image").click(function(e){
-            if (!$(this).hasClass("hover")) {
-                $(this).addClass("hover");
+
+    /*    $(document).ready(function () {
+            if (Modernizr.touch) {
+                // show the close overlay button
+                $(".close-overlay").removeClass("hidden");
+                // handle the adding of hover class when clicked
+                $(".first-image").click(function (e) {
+                    if (!$(this).hasClass("hover")) {
+                        $(this).addClass("hover");
+                    }
+                });
+                // handle the closing of the overlay
+                $(".close-overlay").click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if ($(this).closest(".first-image").hasClass("hover")) {
+                        $(this).closest(".first-image").removeClass("hover");
+                    }
+                });
+            } else {
+                // handle the mouseenter functionality
+                $(".first-image").mouseenter(function () {
+                        $(this).addClass("hover");
+                    })
+                    // handle the mouseleave functionality
+                    .mouseleave(function () {
+                        $(this).removeClass("hover");
+                    });
             }
+        });*/
+
+    //    the ability to change the icon arrow for the gallery can be done by switching out image file in source folder
+    $('#imageGallery').justifiedGallery({
+        rowHeight: 230,
+        maxRowHeight: 0,
+        minRowHeight: 210,
+        lastRow: 'nojustify',
+        rel: 'gallery1',
+        margins: 2,
+        sizeRangeSuffixes: {
+            lt100: '_t',
+            lt240: '_m',
+            lt320: '_n',
+            lt500: '',
+            lt640: '_z',
+            lt1024: '_b'
+        }
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: 0.8,
+            transition: 'elastic',
+            current: ''
         });
-        // handle the closing of the overlay
-        $(".close-overlay").click(function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            if ($(this).closest(".first-image").hasClass("hover")) {
-                $(this).closest(".first-image").removeClass("hover");
-            }
-        });
-    } else {
-        // handle the mouseenter functionality
-        $(".first-image").mouseenter(function(){
-            $(this).addClass("hover");
-        })
-        // handle the mouseleave functionality
-        .mouseleave(function(){
-            $(this).removeClass("hover");
-        });
-    }
-});*/
-    
+    });
+
 }
 
 $(document).ready(main);
