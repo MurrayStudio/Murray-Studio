@@ -3,6 +3,9 @@ var main = function () {
     var shown = false;
     var delay = 0;
 
+    $('#title').addClass("expandOpenEdit");
+    $('#first.image').addClass("slideLeft");
+
     //    the ability to change the icon arrow for the gallery can be done by switching out image file in source folder
     $('#imageGallery').justifiedGallery({
         rowHeight: 230,
@@ -30,7 +33,7 @@ var main = function () {
     });
 
     $('#graphic-design-gallery.expand').click(function () {
-        $("#third-row.row.featurette").hide("slow");
+        $("#forth-row.row.featurette").hide("slow");
 
         $('#imageGallery').show();
 
@@ -40,7 +43,7 @@ var main = function () {
         $('#imageGallery a').each(function () {
             var $a = $(this);
             setTimeout(function () {
-                $a.addClass('fadeIn');
+                $a.addClass('expandOpenEdit');
             }, delay += 300); // delay 100 ms
             //}
         });
@@ -153,14 +156,14 @@ var main = function () {
             shown = true;
         }
 
-        $('#first.image').each(function () {
-            var imagePos2 = $(this).offset().top;
+        /*        $('#first.image').each(function () {
+                    var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('#first.image').addClass("slideLeft");
-            }
-        });
+                    var topOfWindow = $(window).scrollTop();
+                    if (imagePos2 < topOfWindow + 500) {
+                        $('#first.image').addClass("slideLeft");
+                    }
+                });*/
 
         $('#second.image').each(function () {
             var imagePos2 = $(this).offset().top;
@@ -177,6 +180,15 @@ var main = function () {
             var topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#third.image').addClass("slideLeft");
+            }
+        });
+
+        $('#forth.image').each(function () {
+            var imagePos2 = $(this).offset().top;
+
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos2 < topOfWindow + 500) {
+                $('#forth.image').addClass("slideRight");
             }
         });
 

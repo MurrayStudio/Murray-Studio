@@ -4,6 +4,7 @@ body {
     line-height: 30px;
     color: #555555;
     font-weight: 200;
+    height: 100%;
 }
 
 .navbar {
@@ -83,52 +84,32 @@ body {
     padding-right: 30px;
 }
 
-@media (max-width: 640px) {
-    .navbar-default .navbar-brand {
-        display: none;
-    }
-}
-
-@media (max-width: 1000px) {
-    .navbar-nav {
-        padding-right: 0px;
-    }
-    #navbar a {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-}
 /* Footer
 -------------------------------------------------- */
 
 .footer {
-    background-color: #F4F4F4;
+    background-color: #FAFAFA;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
     
-    height: 60px;
-    border-top: 1px solid rgba(0, 0, 0, .2);
+    height: auto;
 }
 
-.footer p {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #777;
-    position: absolute;
+.footer .container {
+    width: 95%;
+    height: auto;
 }
 
 .footer a {
-    color: #b55e5e;
+    color: #f46902;
     font-size: 16px;
-    margin-top: 10px;
 }
 
 .footer .pull-right {
-    color: #b55e5e;
+    color: #f46902;
     font-size: 16px;
-    margin-top: 10px;
-    right: 10%;
+    right: 5%;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -137,6 +118,7 @@ body {
 .carousel {
     height: 650px;
     margin-top: 80px;
+    visibility: hidden;
 }
 /* Since positioning the image, we need to help out the caption */
 
@@ -147,6 +129,7 @@ body {
 
 .carousel .item {
     height: 650px;
+    width: auto;
 }
 
 .carousel-inner > .item > img {
@@ -156,6 +139,7 @@ body {
     min-width: 100%;
     height: 650px;
     max-width: none;
+    width: auto;
 }
 
 .carousel-caption p {
@@ -171,36 +155,35 @@ body {
 .carousel-control.right {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 100%);
 }
-
 /* hide carousel when screen gets too small */
+
 @media (max-width: 1000px) {
     .carousel {
         display: none;
     }
 }
-
 /* Featurettes
 ------------------------- */
 
 #row-1 {
     background-color: #FAFAFA;
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding-bottom: 4%;
+    padding-top: 4%;
     border-top: 1px solid rgba(0, 0, 0, .2);
 }
 
 #row-2 {
     background-color: #F4F4F4;
-    padding-bottom: 80px;
-    padding-top: 80px;
-    border-top: 1px solid rgba(0, 0, 0, .2);
+    padding-bottom: 4%;
+    padding-top: 4%;
+    border-top: 2px solid rgba(0, 0, 0, .2);
 }
 
 #row-3 {
     background-color: #FAFAFA;
-    padding-bottom: 80px;
-    padding-top: 80px;
-    border-top: 1px solid rgba(0, 0, 0, .2);
+    padding-bottom: 4%;
+    padding-top: 4%;
+    border-top: 2px solid rgba(0, 0, 0, .2);
 }
 
 .effects .image {
@@ -300,11 +283,11 @@ body {
     margin: auto;
     width: 100%;
     height: 100%;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+    border-radius: 500px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -342,7 +325,7 @@ body {
     -moz-border-radius: 120px;
     -ms-border-radius: 120px;
     -o-border-radius: 120px;
-    border-radius: 0px;
+    border-radius: 120px;
 }
 
 .overlay {
@@ -363,7 +346,7 @@ body {
 }
 
 #effect-3 .overlay {
-    border-radius: 0px;
+    border-radius: 500px;
 }
 
 #effect-1 a.expand {
@@ -448,7 +431,7 @@ a.close-overlay.hidden {
     font-weight: 300;
     line-height: 1.3;
     letter-spacing: -1px;
-    margin-top: 120px;
+    margin-top: 18%;
     font-size: 60px;
     display: inline-block;
     color: #555555;
@@ -507,4 +490,36 @@ a.close-overlay.hidden {
 
 .slider.closed {
     max-height: 0;
+}
+/* Responsive CSS
+-------------------------------------------------- */
+
+@media (max-width: 640px) {
+    .navbar-default .navbar-brand {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    .navbar-nav {
+        padding-right: 0px;
+    }
+    #navbar a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .featurette-heading {
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+    }
+    #first-header.featurette-heading {
+        width: 100%;
+        text-align: center;
+        margin-top: 65px;
+    }
+    .lead {
+        width: 100%;
+        text-align: center;
+    }
 }

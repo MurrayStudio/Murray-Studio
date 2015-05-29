@@ -2,6 +2,8 @@ var main = function () {
 
     var shown = false;
 
+    $('#carousel').addClass("expandOpenEdit");
+
     //    var enabled = false;
     //    var scrolled = false;
     //    $('#project-box').hide();
@@ -190,37 +192,37 @@ var main = function () {
         });
 
     });
-    
-/*    $(document).ready(function(){
-    if (Modernizr.touch) {
-        // show the close overlay button
-        $(".close-overlay").removeClass("hidden");
-        // handle the adding of hover class when clicked
-        $(".first-image").click(function(e){
-            if (!$(this).hasClass("hover")) {
+
+    /*    $(document).ready(function(){
+        if (Modernizr.touch) {
+            // show the close overlay button
+            $(".close-overlay").removeClass("hidden");
+            // handle the adding of hover class when clicked
+            $(".first-image").click(function(e){
+                if (!$(this).hasClass("hover")) {
+                    $(this).addClass("hover");
+                }
+            });
+            // handle the closing of the overlay
+            $(".close-overlay").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if ($(this).closest(".first-image").hasClass("hover")) {
+                    $(this).closest(".first-image").removeClass("hover");
+                }
+            });
+        } else {
+            // handle the mouseenter functionality
+            $(".first-image").mouseenter(function(){
                 $(this).addClass("hover");
-            }
-        });
-        // handle the closing of the overlay
-        $(".close-overlay").click(function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            if ($(this).closest(".first-image").hasClass("hover")) {
-                $(this).closest(".first-image").removeClass("hover");
-            }
-        });
-    } else {
-        // handle the mouseenter functionality
-        $(".first-image").mouseenter(function(){
-            $(this).addClass("hover");
-        })
-        // handle the mouseleave functionality
-        .mouseleave(function(){
-            $(this).removeClass("hover");
-        });
-    }
-});*/
-    
+            })
+            // handle the mouseleave functionality
+            .mouseleave(function(){
+                $(this).removeClass("hover");
+            });
+        }
+    });*/
+
 }
 
 $(document).ready(main);
