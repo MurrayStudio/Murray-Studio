@@ -2,6 +2,7 @@ var main = function () {
 
     var shown = false;
     var delay = 0;
+    var topOfWindow = $(window).scrollTop();
 
     $('#title').addClass("expandOpenEdit");
     $('#first.image').addClass("slideLeft");
@@ -32,7 +33,7 @@ var main = function () {
         });
     });
 
-    
+
     //click hover button to expand gallery of images
     $('#graphic-design-gallery.expand').click(function () {
         $("#forth-row.row.featurette").hide("slow");
@@ -52,7 +53,7 @@ var main = function () {
         });
     });
 
-    
+
     //click link button to expand gallery of images
     $('#gallery-button').click(function () {
         $("#forth-row.row.featurette").hide("slow");
@@ -231,7 +232,7 @@ var main = function () {
         $('#second.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
+            topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#second.image').addClass("slideRight");
             }
@@ -240,7 +241,7 @@ var main = function () {
         $('#third.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
+            topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#third.image').addClass("slideLeft");
             }
@@ -249,7 +250,7 @@ var main = function () {
         $('#forth.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
+            topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#forth.image').addClass("slideRight");
             }
@@ -257,36 +258,35 @@ var main = function () {
 
 
     });
+    
+    //if page loads in middle, load the animations without scolling
 
-    /*    $(document).ready(function () {
-            if (Modernizr.touch) {
-                // show the close overlay button
-                $(".close-overlay").removeClass("hidden");
-                // handle the adding of hover class when clicked
-                $(".first-image").click(function (e) {
-                    if (!$(this).hasClass("hover")) {
-                        $(this).addClass("hover");
-                    }
-                });
-                // handle the closing of the overlay
-                $(".close-overlay").click(function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    if ($(this).closest(".first-image").hasClass("hover")) {
-                        $(this).closest(".first-image").removeClass("hover");
-                    }
-                });
-            } else {
-                // handle the mouseenter functionality
-                $(".first-image").mouseenter(function () {
-                        $(this).addClass("hover");
-                    })
-                    // handle the mouseleave functionality
-                    .mouseleave(function () {
-                        $(this).removeClass("hover");
-                    });
-            }
-        });*/
+    $('#second.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            $('#second.image').addClass("slideRight");
+        }
+    });
+
+    $('#third.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            $('#third.image').addClass("slideLeft");
+        }
+    });
+
+    $('#forth.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            $('#forth.image').addClass("slideRight");
+        }
+    });
 
 }
 

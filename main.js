@@ -1,48 +1,9 @@
 var main = function () {
 
     var shown = false;
+    var topOfWindow = $(window).scrollTop();
 
     $('#carousel').addClass("expandOpenEdit");
-
-    //    var enabled = false;
-    //    var scrolled = false;
-    //    $('#project-box').hide();
-    //
-    //    $('.project-list').click(function () {
-    //        debugger;
-    //        if (enabled == false) {
-    //            $('#project-box').addClass("slideUp2");
-    //            $('#project-box').removeClass("slideDown");
-    //            enabled = true;
-    //            $('#project-box').show();
-    //
-    //        } else {
-    //            $('#project-box').removeClass("slideUp2");
-    //            $('#project-box').addClass("slideDown");
-    //            enabled = false;
-    //
-    //            $("#project-box").on('webkitAnimationEnd', function () {
-    //                if (enabled == false) {
-    //                    $('#project-box').hide();
-    //                }
-    //            });
-    //        }
-    //    });
-
-    //    $(window).scroll(function () {
-    //        $('#project-box').each(function () {
-    //            var imagePos = $(this).offset().top;
-    //
-    //            var topOfWindow = $(window).scrollTop();
-    //            if (imagePos < topOfWindow + 400 && scrolled == false) {
-    //                $('#project-box').addClass("slideUp2");
-    //                $('#project-box').show();
-    //                $('#project-box').removeClass("slideDown");
-    //                enabled = true;
-    //                scrolled = true;
-    //            }
-    //        });
-    //    });
 
     $(window).scroll(function () {
 
@@ -151,23 +112,10 @@ var main = function () {
             shown = true;
         }
 
-        //        $('#project-box').each(function () {
-        //            var imagePos = $(this).offset().top;
-        //
-        //            var topOfWindow = $(window).scrollTop();
-        //            if (imagePos < topOfWindow + 500) {
-        //                $('#project-box').addClass("slideUp2");
-        //                //                $('#project-box').show();
-        //                //                $('#project-box').removeClass("slideDown");
-        //                //                enabled = true;
-        //                //                scrolled = true;
-        //            }
-        //        });
-
         $('#first.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
+            topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#first.image').addClass("slideLeft");
             }
@@ -176,7 +124,7 @@ var main = function () {
         $('#second.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
+            topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#second.image').addClass("slideRight");
             }
@@ -185,43 +133,42 @@ var main = function () {
         $('#third.image').each(function () {
             var imagePos2 = $(this).offset().top;
 
-            var topOfWindow = $(window).scrollTop();
+            topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#third.image').addClass("slideLeft");
             }
         });
 
     });
+    
+    //if page loads in middle, load the animations without scolling
 
-    /*    $(document).ready(function(){
-        if (Modernizr.touch) {
-            // show the close overlay button
-            $(".close-overlay").removeClass("hidden");
-            // handle the adding of hover class when clicked
-            $(".first-image").click(function(e){
-                if (!$(this).hasClass("hover")) {
-                    $(this).addClass("hover");
-                }
-            });
-            // handle the closing of the overlay
-            $(".close-overlay").click(function(e){
-                e.preventDefault();
-                e.stopPropagation();
-                if ($(this).closest(".first-image").hasClass("hover")) {
-                    $(this).closest(".first-image").removeClass("hover");
-                }
-            });
-        } else {
-            // handle the mouseenter functionality
-            $(".first-image").mouseenter(function(){
-                $(this).addClass("hover");
-            })
-            // handle the mouseleave functionality
-            .mouseleave(function(){
-                $(this).removeClass("hover");
-            });
+    $('#first.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            $('#first.image').addClass("slideLeft");
         }
-    });*/
+    });
+
+    $('#second.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            $('#second.image').addClass("slideRight");
+        }
+    });
+
+    $('#third.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            $('#third.image').addClass("slideLeft");
+        }
+    });
 
 }
 
