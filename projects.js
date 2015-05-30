@@ -32,13 +32,16 @@ var main = function () {
         });
     });
 
+    
+    //click hover button to expand gallery of images
     $('#graphic-design-gallery.expand').click(function () {
         $("#forth-row.row.featurette").hide("slow");
 
         $('#imageGallery').show();
-
+        $("#gallery.back-container").show();
         $('#gallery-heading').show();
         $('#gallery-heading').addClass('fadeIn');
+        $('#gallery.back-container').addClass('fadeIn');
 
         $('#imageGallery a').each(function () {
             var $a = $(this);
@@ -47,6 +50,66 @@ var main = function () {
             }, delay += 300); // delay 100 ms
             //}
         });
+    });
+
+    
+    //click link button to expand gallery of images
+    $('#gallery-button').click(function () {
+        $("#forth-row.row.featurette").hide("slow");
+
+        $('#imageGallery').show();
+        $("#gallery.back-container").show();
+        $('#gallery-heading').show();
+        $('#gallery-heading').addClass('fadeIn');
+        $('#gallery.back-container').addClass('fadeIn');
+
+        $('#imageGallery a').each(function () {
+            var $a = $(this);
+            setTimeout(function () {
+                $a.addClass('expandOpenEdit');
+            }, delay += 300); // delay 100 ms
+            //}
+        });
+    });
+
+    //click back button to close image gallery and open row 4 again
+    $('#gallery.go-back').click(function () {
+        $("#imageGallery").hide("slow");
+        $("#gallery.back-container").hide("slow");
+        $("#gallery-heading").hide("slow");
+
+        $('#forth-row.row.featurette').show();
+        $('#forth-row.row.featurette').addClass('fadeIn');
+
+    });
+
+
+    //click link button to expand and play youtube video
+    $('#youtube-video').click(function () {
+        $("#first-row.row.featurette").hide("slow");
+
+        $('#video-container').show();
+        $('#video-container').addClass('fadeIn');
+
+        $('#video.back-container').show();
+        $('#video.back-container').addClass('fadeIn');
+
+        $("#video")[0].src = "https://www.youtube.com/embed/0aGEfgc-haQ?enablejsapi=1&autoplay=1";
+        ev.preventDefault();
+
+    });
+
+    //click back button to close and stop youtube video
+    $('#video.go-back').click(function () {
+        $("#video-container").hide("slow");
+        $("#video.back-container").hide("slow");
+
+        $('#first-row.row.featurette').show();
+        $('#first-row.row.featurette').addClass('fadeIn');
+
+        $("#video")[0].src = "https://www.youtube.com/embed/0aGEfgc-haQ?enablejsapi=1";
+        ev.preventDefault();
+
     });
 
     $(window).scroll(function () {
