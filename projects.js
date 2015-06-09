@@ -2,10 +2,15 @@ var main = function () {
 
     var shown = false;
     var delay = 0;
+    var delay2 = 500;
     var topOfWindow = $(window).scrollTop();
 
     $('#title').addClass("expandOpenEdit");
-    $('#first.image').addClass("slideLeft");
+
+    setTimeout(function () {
+        $('#first.image').addClass("slideLeft");
+    }, 500); // delay 100 ms
+
 
     //    the ability to change the icon arrow for the gallery can be done by switching out image file in source folder
     $('#imageGallery').justifiedGallery({
@@ -117,36 +122,43 @@ var main = function () {
 
 
         if ($(window).scrollTop() == 0) {
-            $('.navbar').animate({
-                height: "80px"
-            }, {
-                duration: 300,
-                queue: false
-            });
-
-            $('.logo-class').animate({
+            $('.logo').animate({
                 height: "60px"
             }, {
                 duration: 300,
                 queue: false
             });
 
-            $('.logo-class').animate({
+            $('.logo').animate({
                 width: "60px"
             }, {
                 duration: 300,
                 queue: false
             });
 
-            $('.logo-class').animate({
-                paddingTop: "9px"
+            $('.logo').animate({
+                marginTop: "10px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('.logo').animate({
+                marginBottom: "10px"
             }, {
                 duration: 300,
                 queue: false
             });
 
             $('.navbar-brand').animate({
-                paddingTop: "30px"
+                marginTop: "15px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('.navbar-brand').animate({
+                marginBottom: "10px"
             }, {
                 duration: 300,
                 queue: false
@@ -160,7 +172,35 @@ var main = function () {
             });
 
             $('#navbar a').animate({
-                paddingTop: "30px"
+                fontSize: "20px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('#link-container').animate({
+                marginTop: "15px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('#link-container').animate({
+                marginBottom: "10px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('button.navbar-toggle').animate({
+                marginTop: "25px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('button.navbar-toggle.collasped').animate({
+                marginTop: "25px"
             }, {
                 duration: 300,
                 queue: false
@@ -168,36 +208,43 @@ var main = function () {
 
             shown = false;
         } else if ($(window).scrollTop() > 0 && !shown) {
-            $('.navbar').animate({
-                height: "40px"
-            }, {
-                duration: 300,
-                queue: false
-            });
-
-            $('.logo-class').animate({
+            $('.logo').animate({
                 height: "35px"
             }, {
                 duration: 300,
                 queue: false
             });
 
-            $('.logo-class').animate({
-                paddingTop: "0px"
-            }, {
-                duration: 300,
-                queue: false
-            });
-
-            $('.logo-class').animate({
+            $('.logo').animate({
                 width: "35px"
             }, {
                 duration: 300,
                 queue: false
             });
 
+            $('.logo').animate({
+                marginTop: "10px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('.logo').animate({
+                marginBottom: "0px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
             $('.navbar-brand').animate({
-                paddingTop: "15px"
+                marginTop: "2px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('.navbar-brand').animate({
+                marginBottom: "2px"
             }, {
                 duration: 300,
                 queue: false
@@ -211,7 +258,35 @@ var main = function () {
             });
 
             $('#navbar a').animate({
-                paddingTop: "15px"
+                fontSize: "18px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('#link-container').animate({
+                marginTop: "3px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('#link-container').animate({
+                marginBottom: "1px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('button.navbar-toggle').animate({
+                marginTop: "10px"
+            }, {
+                duration: 300,
+                queue: false
+            });
+
+            $('button.navbar-toggle.collasped').animate({
+                marginTop: "10px"
             }, {
                 duration: 300,
                 queue: false
@@ -258,7 +333,7 @@ var main = function () {
 
 
     });
-    
+
     //if page loads in middle, load the animations without scolling
 
     $('#second.image').each(function () {
@@ -266,7 +341,9 @@ var main = function () {
 
         topOfWindow = $(window).scrollTop();
         if (imagePos2 < topOfWindow + 500) {
-            $('#second.image').addClass("slideRight");
+            setTimeout(function () {
+                $('#second.image').addClass("slideRight");
+            }, delay2 += 500);
         }
     });
 
@@ -275,7 +352,9 @@ var main = function () {
 
         topOfWindow = $(window).scrollTop();
         if (imagePos2 < topOfWindow + 500) {
-            $('#third.image').addClass("slideLeft");
+            setTimeout(function () {
+                $('#third.image').addClass("slideLeft");
+            }, delay2 += 500);
         }
     });
 
@@ -284,7 +363,9 @@ var main = function () {
 
         topOfWindow = $(window).scrollTop();
         if (imagePos2 < topOfWindow + 500) {
-            $('#forth.image').addClass("slideRight");
+            setTimeout(function () {
+                $('#forth.image').addClass("slideRight");
+            }, delay2 += 500);
         }
     });
 

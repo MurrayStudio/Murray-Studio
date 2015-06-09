@@ -8,37 +8,60 @@ body {
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    margin: auto;
-    height: 80px;
-    display: inline-block;
     box-shadow: 0px 4px rgba(0, 0, 0, 0.1);
-    -webkit-backface-visibility: hidden;
+    background-color: #FAFAFA;
 }
 
-.logo {
-    float: left;
-    padding-top: 9px;
+#nav.container {
+    width: 100%;
 }
 
 #navbar a {
-    font-size: 18px;
-    padding: 30px;
+    font-size: 20px;
+    margin-left: 10px;
     font-family: 'NovecentowideLightBold', 'Source Sans Pro', sans-serif;
 }
 
-.navbar-default .navbar-brand {
-    font-size: 42px;
-    padding-top: 30px;
-    padding-left: 30px;
-    position: relative;
-    float: right;
+#link-container {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
     font-family: 'NovecentowideLightBold', 'Source Sans Pro', sans-serif;
+    float: right;
+}
+
+.logo {
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header-container {
+    float: left;
+}
+
+button.navbar-toggle.collapsed {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+button.navbar-toggle {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+#navbar li.active a {
+    background-color: transparent;
+    font-weight: 600;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -58,32 +81,6 @@ body {
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
-
-#navbar li.active a {
-    background-color: transparent;
-    font-weight: 600;
-}
-/* Flip around the padding for proper display in narrow viewports */
-
-.navbar-wrapper > .container {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.navbar-wrapper .navbar .container {
-    width: auto;
-}
-
-.navbar-nav {
-    float: right;
-    padding-right: 30px;
-}
-
 /* Footer
 -------------------------------------------------- */
 
@@ -116,7 +113,6 @@ body {
 /* Carousel base class */
 
 .carousel {
-
     margin-top: 80px;
     visibility: hidden;
 }
@@ -127,12 +123,9 @@ body {
 }
 /* Declare heights because of positioning of img element */
 
-.carousel .item {
-
-}
+.carousel .item {}
 
 .carousel-inner > .item > img {
-
     min-width: 100%;
 }
 
@@ -416,6 +409,9 @@ a.close-overlay {
 a.close-overlay.hidden {
     display: none;
 }
+/* ============================================================
+  featurette
+============================================================ */
 
 .featurette-divider {
     border: 1px solid #555555;
@@ -492,29 +488,18 @@ a.close-overlay.hidden {
 /* Responsive CSS
 -------------------------------------------------- */
 
-@media (max-width: 640px) {
-    .navbar-default .navbar-brand {
+@media (max-width: 480px) {
+    .navbar-brand {
+        visibility: hidden;
         display: none;
     }
 }
 
 @media (max-width: 990px) {
-    .navbar-nav {
-        padding-right: 0px;
-    }
-    #navbar a {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
     .featurette-heading {
         width: 100%;
         text-align: center;
         margin-top: 0px;
-    }
-    #first-header.featurette-heading {
-        width: 100%;
-        text-align: center;
-        margin-top: 65px;
     }
     .lead {
         width: 100%;

@@ -1,9 +1,17 @@
 var main = function () {
 
     var shown = false;
+    var delay = 0;
+    var delay2 = 500;
     var topOfWindow = $(window).scrollTop();
 
-    $('#carousel').addClass("expandOpenEdit");
+    $('#title').addClass("expandOpenEdit");
+
+    setTimeout(function () {
+        $('#first.image').addClass("slideLeft");
+    }, 500); // delay 100 ms
+
+
 
     $(window).scroll(function () {
 
@@ -182,62 +190,7 @@ var main = function () {
             shown = true;
         }
 
-        $('#first.image').each(function () {
-            var imagePos2 = $(this).offset().top;
 
-            topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('#first.image').addClass("slideLeft");
-            }
-        });
-
-        $('#second.image').each(function () {
-            var imagePos2 = $(this).offset().top;
-
-            topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('#second.image').addClass("slideRight");
-            }
-        });
-
-        $('#third.image').each(function () {
-            var imagePos2 = $(this).offset().top;
-
-            topOfWindow = $(window).scrollTop();
-            if (imagePos2 < topOfWindow + 500) {
-                $('#third.image').addClass("slideLeft");
-            }
-        });
-
-    });
-
-    //if page loads in middle, load the animations without scolling
-
-    $('#first.image').each(function () {
-        var imagePos2 = $(this).offset().top;
-
-        topOfWindow = $(window).scrollTop();
-        if (imagePos2 < topOfWindow + 500) {
-            $('#first.image').addClass("slideLeft");
-        }
-    });
-
-    $('#second.image').each(function () {
-        var imagePos2 = $(this).offset().top;
-
-        topOfWindow = $(window).scrollTop();
-        if (imagePos2 < topOfWindow + 500) {
-            $('#second.image').addClass("slideRight");
-        }
-    });
-
-    $('#third.image').each(function () {
-        var imagePos2 = $(this).offset().top;
-
-        topOfWindow = $(window).scrollTop();
-        if (imagePos2 < topOfWindow + 500) {
-            $('#third.image').addClass("slideLeft");
-        }
     });
 
 }
