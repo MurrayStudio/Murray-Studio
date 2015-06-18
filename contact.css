@@ -3,7 +3,14 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 30px;
     color: #555555;
-    font-weight: 200;
+    font-weight: 300;
+    position: relative;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
     height: 100%;
 }
 
@@ -85,37 +92,30 @@ button.navbar-toggle {
 -------------------------------------------------- */
 
 #name-input {
-    display: inline-block;
-    position:relative;
+    position: relative;
+    margin-bottom: 2%;
 }
 
 #email-input {
-    display: inline-block;
-    position:relative;
+    position: relative;
 }
 
 #name-text {
-    display: inline-block;
-    padding-right: 1%;
     top: 5px;
     font-size: 30px;
-    position:relative;
+    position: relative;
 }
 
 #email-text {
-    display: inline-block;
-    padding-left: 10%;
-    padding-right: 1%;
     font-size: 30px;
-    padding-top: 30px;
-    position:relative;
+    position: relative;
     top: 5px;
 }
 
 #input-container {
     text-align: center;
     padding-bottom: 2%;
-    position:relative;
+    position: relative;
 }
 
 #message-container {
@@ -128,6 +128,22 @@ button.navbar-toggle {
 
 #submit-container {
     text-align: center;
+}
+
+input[type="submit"] {
+    background: #FAFAFA;
+    width: 200px;
+    /* width of image */
+    
+    margin-top: 1%;
+    height: 50px;
+    /* height of image */
+    
+    border: 0;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    color: #555555;
+    font-weight: 300;
+    font-size: 18px;
 }
 /* Title
 -------------------------------------------------- */
@@ -159,38 +175,18 @@ button.navbar-toggle {
 
 .footer {
     background-color: #F4F4F4;
-    bottom: 0;
+    top: 100%;
     width: 100%;
     /* Set the fixed height of the footer here */
-    
+    position: absolute;
     height: auto;
 }
 
-.footer .container {
-    width: 95%;
-    height: auto;
-}
-
-.footer a {
-    color: #f46902;
-    font-size: 16px;
-}
-
-.footer .pull-right {
-    color: #f46902;
-    font-size: 16px;
-    right: 5%;
-}
-/* Footer
--------------------------------------------------- */
-
-.footer {
-    background-color: #FAFAFA;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    
-    height: auto;
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 100%;
 }
 
 .footer .container {
@@ -212,7 +208,7 @@ button.navbar-toggle {
 ------------------------- */
 
 #row-1 {
-    background-color: #FAFAFA;
+    background-color: #F4F4F4;
     padding-bottom: 4%;
     padding-top: 4%;
     border-top: 1px solid rgba(0, 0, 0, .2);

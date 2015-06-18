@@ -17,6 +17,7 @@
 
 <body>
 
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div id="nav" class="container">
@@ -79,6 +80,7 @@ if ($action=="")    /* display the contact form */
                             <input id="email-input" name="email" type="text" value="" size="30" />
                         </div>
                         <div id="message-container">
+                            <p id="email-text">Message</p>
                             <textarea id="message-text" name="message" rows="7" cols="30"></textarea>
                         </div>
                         <div id="submit-container">
@@ -122,9 +124,11 @@ else                /* send the submitted data */
         </div>
     </footer>
 
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="about.js"></script>
+    <script src="contact.js"></script>
 </body>
 
 
