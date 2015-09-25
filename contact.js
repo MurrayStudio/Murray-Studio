@@ -12,7 +12,6 @@ var main = function () {
     }, 500); // delay 100 ms
 
 
-
     $(window).scroll(function () {
 
 

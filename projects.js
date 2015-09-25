@@ -4,6 +4,8 @@ var main = function () {
     var delay = 0;
     var delay2 = 500;
     var topOfWindow = $(window).scrollTop();
+    
+    var foo = function (input) { return input + 1; };
 
     $('#title').addClass("expandOpenEdit");
 
@@ -100,7 +102,7 @@ var main = function () {
         $('#video.back-container').show();
         $('#video.back-container').addClass('fadeIn');
 
-        $("#video")[0].src = "https://www.youtube.com/embed/0aGEfgc-haQ?enablejsapi=1&autoplay=1";
+        $("#video")[0].src = "https://www.youtube.com/embed/PT8qZGleTYA?enablejsapi=1&autoplay=1";
         ev.preventDefault();
 
     });
@@ -113,7 +115,7 @@ var main = function () {
         $('#first-row.row.featurette').show();
         $('#first-row.row.featurette').addClass('fadeIn');
 
-        $("#video")[0].src = "https://www.youtube.com/embed/0aGEfgc-haQ?enablejsapi=1";
+        $("#video")[0].src = "https://www.youtube.com/embed/PT8qZGleTYA?enablejsapi=1";
         ev.preventDefault();
 
     });

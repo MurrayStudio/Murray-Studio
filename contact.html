@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Murray Studio</title>
     <meta name="description" content="Projects Page for Murray Studio">
-    <link rel="icon" href="http://i.imgur.com/vA5AFy9.png">
+    <link rel="icon" href="http://i.imgur.com/5ZNOCCD.png">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,18 +30,18 @@
                 </button>
                 <div class="header-container">
                     <a class="navbar-brand" href="#">Murray Studio</a>
-                    <img class="logo" src="http://i.imgur.com/vA5AFy9.png" alt="Logo" height="60" width="60">
+                    <img class="logo" src="http://i.imgur.com/5ZNOCCD.png" alt="Logo" height="60" width="60">
                 </div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="link-container" class="nav navbar-nav navbar-right">
-                    <li><a href="/index.html">Home</a>
+                    <li><a href="index.html">Home</a>
                     </li>
-                    <li><a href="/projects.html">Projects</a>
+                    <li><a href="projects.html">Projects</a>
                     </li>
-                    <li><a href="/about.html">About Me</a>
+                    <li><a href="about.html">About Me</a>
                     </li>
-                    <li class="active"><a href="/contact.html">Contact</a>
+                    <li class="active"><a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -57,19 +57,25 @@
 
     <section id="row-1">
 
-        <!-- CONTACT START -->
+        <div class="container marketing">
 
-        <!-- Wrap the rest of the page in another container to center all the content. -->
+            <h3 id="contact-description">I'm always looking for new opportunities. Shoot me an email!</h3>
+
+            <h3 id="email-description" class="container marketing">s.murray.studio@gmail.com</h3>
+
+        </div>
+
+    </section>
+
+    <!--    
+    
+    <section id="row-1">
+
         <div class="container marketing">
 
 
             <div id="first-row" class="row featurette">
 
-                <!--                <?php
-$action=$_REQUEST['action'];
-if ($action=="")    /* display the contact form */
-    {
-    ?>-->
                 <div class="contact-container">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div id="input-container">
@@ -88,31 +94,14 @@ if ($action=="")    /* display the contact form */
                         </div>
                     </form>
                 </div>
-                <!--    <?php
-    } 
-else                /* send the submitted data */
-    {
-    $name=$_REQUEST['name'];
-    $email=$_REQUEST['email'];
-    $message=$_REQUEST['message'];
-    if (($name=="")||($email=="")||($message==""))
-        {
-        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-        }
-    else{        
-        $from="From: $name<$email>\r\nReturn-path: $email";
-        $subject="Message sent using your contact form";
-        mail("youremail@yoursite.com", $subject, $message, $from);
-        echo "Email sent!";
-        }
-    }  
-?>-->
 
 
             </div>
         </div>
 
     </section>
+    
+-->
 
     <!-- /END THE FEATURETTES -->
 
@@ -126,7 +115,7 @@ else                /* send the submitted data */
 
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="contact.js"></script>
 </body>

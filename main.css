@@ -81,6 +81,8 @@ button.navbar-toggle {
     -o-transition: color 0.2s ease;
     transition: color 0.2s ease;
 }
+
+
 /* Footer
 -------------------------------------------------- */
 
@@ -89,7 +91,6 @@ button.navbar-toggle {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    
     height: auto;
 }
 
@@ -108,19 +109,27 @@ button.navbar-toggle {
     font-size: 16px;
     right: 5%;
 }
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
+
+
 /* Carousel base class */
 
 .carousel {
     margin-top: 80px;
     visibility: hidden;
 }
+
+
 /* Since positioning the image, we need to help out the caption */
 
 .carousel-caption {
     z-index: 10;
 }
+
+
 /* Declare heights because of positioning of img element */
 
 .carousel .item {}
@@ -146,6 +155,8 @@ button.navbar-toggle {
 .carousel-control.right {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 100%);
 }
+
+
 /* hide carousel when screen gets too small */
 
 @media (max-width: 1000px) {
@@ -153,6 +164,8 @@ button.navbar-toggle {
         display: none;
     }
 }
+
+
 /* Featurettes
 ------------------------- */
 
@@ -197,6 +210,8 @@ button.navbar-toggle {
     height: auto;
     width: auto;
 }
+
+
 /* ============================================================
   EFFECT 5 - ICON BORDER ANIMATE
 ============================================================ */
@@ -409,6 +424,8 @@ a.close-overlay {
 a.close-overlay.hidden {
     display: none;
 }
+
+
 /* ============================================================
   featurette
 ============================================================ */
@@ -419,6 +436,8 @@ a.close-overlay.hidden {
     visibility: hidden;
     /* Space out the Bootstrap <hr> more */
 }
+
+
 /* Thin out the marketing headings */
 
 .featurette-heading {
@@ -436,6 +455,8 @@ a.close-overlay.hidden {
     text-decoration: none;
     color: #f46902
 }
+
+
 /* Project Box 
 ------------------------- */
 
@@ -476,7 +497,6 @@ a.close-overlay.hidden {
     overflow-y: scroll;
     max-height: 500px;
     /* approximate max height */
-    
     transition-property: all;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
@@ -485,6 +505,8 @@ a.close-overlay.hidden {
 .slider.closed {
     max-height: 0;
 }
+
+
 /* Responsive CSS
 -------------------------------------------------- */
 
@@ -500,6 +522,12 @@ a.close-overlay.hidden {
         width: 100%;
         text-align: center;
         margin-top: 0px;
+    }
+    .carousel {
+        visibility: block;
+    }
+    #row-1 {
+        margin-top: 80px;
     }
     .lead {
         width: 100%;
