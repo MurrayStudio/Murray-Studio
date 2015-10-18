@@ -191,6 +191,13 @@ button.navbar-toggle {
     border-top: 2px solid rgba(0, 0, 0, .2);
 }
 
+#row-5 {
+    background-color: #FAFAFA;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    border-top: 2px solid rgba(0, 0, 0, .2);
+}
+
 .lead a {
     color: #f46902;
 }
@@ -551,22 +558,24 @@ a.close-overlay.hidden {
     color: #f46902
 }
 /* ============================================================
-  Gallery
+  Galleries
 ============================================================ */
 
-#imageGallery {
+/* Graphic Design Gallery */
+
+#image-gallery-graphic-design {
     margin-top: 50px;
     display: none;
     visibility: hidden;
 }
 
-#gallery-heading {
+#gallery-heading-graphic-design {
     display: none;
     visibility: hidden;
     margin-top: 0px;
 }
 
-#gallery.back-container {
+#gallery-graphic-design.back-container {
     position: relative;
     width: 100%;
     visibility: hidden;
@@ -574,7 +583,7 @@ a.close-overlay.hidden {
     margin-top: 1%;
 }
 
-#gallery.go-back {
+#gallery-graphic-design.go-back {
     text-align: center;
     color: #f46902;
     width: 100%;
@@ -583,7 +592,42 @@ a.close-overlay.hidden {
     font-weight: 300;
 }
 
-#gallery.go-back:visited {
+/* Murray Studio Gallery */
+
+#gallery-graphic-design.go-back:visited {
+    color: #f46902;
+}
+
+#image-gallery-murray-studio {
+    margin-top: 50px;
+    display: none;
+    visibility: hidden;
+}
+
+#gallery-heading-murray-studio {
+    display: none;
+    visibility: hidden;
+    margin-top: 0px;
+}
+
+#gallery-murray-studio.back-container {
+    position: relative;
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    margin-top: 1%;
+}
+
+#gallery-murray-studio.go-back {
+    text-align: center;
+    color: #f46902;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-weight: 300;
+}
+
+#gallery-murray-studio.go-back:visited {
     color: #f46902;
 }
 /* Responsive CSS

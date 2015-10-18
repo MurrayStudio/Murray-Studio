@@ -12,10 +12,13 @@ var main = function () {
     setTimeout(function () {
         $('#first.image').addClass("slideLeft");
     }, 500); // delay 100 ms
+    
+    
+    /* BEGIN GRAPHIC DESIGN GALLERY JS */
+    
 
-
-    //    the ability to change the icon arrow for the gallery can be done by switching out image file in source folder
-    $('#imageGallery').justifiedGallery({
+    //define gallery container prefs
+    $('#image-gallery-graphic-design').justifiedGallery({
         rowHeight: 230,
         maxRowHeight: 0,
         minRowHeight: 210,
@@ -43,15 +46,15 @@ var main = function () {
 
     //click hover button to expand gallery of images
     $('#graphic-design-gallery.expand').click(function () {
-        $("#forth-row.row.featurette").hide("slow");
+        $("#fifth-row.row.featurette").hide("slow");
 
-        $('#imageGallery').show();
-        $("#gallery.back-container").show();
-        $('#gallery-heading').show();
-        $('#gallery-heading').addClass('fadeIn');
-        $('#gallery.back-container').addClass('fadeIn');
+        $('#image-gallery-graphic-design').show();
+        $("#gallery-graphic-design.back-container").show();
+        $('#gallery-heading-graphic-design').show();
+        $('#gallery-heading-graphic-design').addClass('fadeIn');
+        $('#gallery-graphic-design.back-container').addClass('fadeIn');
 
-        $('#imageGallery a').each(function () {
+        $('#image-gallery-graphic-design a').each(function () {
             var $a = $(this);
             setTimeout(function () {
                 $a.addClass('expandOpenEdit');
@@ -62,16 +65,16 @@ var main = function () {
 
 
     //click link button to expand gallery of images
-    $('#gallery-button').click(function () {
-        $("#forth-row.row.featurette").hide("slow");
+    $('#gallery-button-graphic-design').click(function () {
+        $("#fifth-row.row.featurette").hide("slow");
 
-        $('#imageGallery').show();
-        $("#gallery.back-container").show();
-        $('#gallery-heading').show();
-        $('#gallery-heading').addClass('fadeIn');
-        $('#gallery.back-container').addClass('fadeIn');
+        $('#image-gallery-graphic-design').show();
+        $("#gallery-graphic-design.back-container").show();
+        $('#gallery-heading-graphic-design').show();
+        $('#gallery-heading-graphic-design').addClass('fadeIn');
+        $('#gallery-graphic-design.back-container').addClass('fadeIn');
 
-        $('#imageGallery a').each(function () {
+        $('#image-gallery-graphic-design a').each(function () {
             var $a = $(this);
             setTimeout(function () {
                 $a.addClass('expandOpenEdit');
@@ -81,15 +84,98 @@ var main = function () {
     });
 
     //click back button to close image gallery and open row 4 again
-    $('#gallery.go-back').click(function () {
-        $("#imageGallery").hide("slow");
-        $("#gallery.back-container").hide("slow");
-        $("#gallery-heading").hide("slow");
+    $('#gallery-graphic-design.go-back').click(function () {
+        $("#image-gallery-graphic-design").hide("slow");
+        $("#gallery-graphic-design.back-container").hide("slow");
+        $("#gallery-heading-graphic-design").hide("slow");
+
+        $('#fifth-row.row.featurette').show();
+        $('#fifth-row.row.featurette').addClass('fadeIn');
+
+    });
+    
+    
+    /* BEGIN MURRAY STUDIO GALLERY JS */
+    
+    
+        //define gallery container prefs
+    $('#image-gallery-murray-studio').justifiedGallery({
+        rowHeight: 230,
+        maxRowHeight: 0,
+        minRowHeight: 210,
+        lastRow: 'nojustify',
+        rel: 'gallery1',
+        margins: 2,
+        sizeRangeSuffixes: {
+            lt100: '_t',
+            lt240: '_m',
+            lt320: '_n',
+            lt500: '',
+            lt640: '_z',
+            lt1024: '_b'
+        }
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: 0.8,
+            transition: 'elastic',
+            current: ''
+        });
+    });
+
+
+    //click hover button to expand gallery of images
+    $('#murray-studio-gallery.expand').click(function () {
+        $("#forth-row.row.featurette").hide("slow");
+
+        $('#image-gallery-murray-studio').show();
+        $("#gallery-murray-studio.back-container").show();
+        $('#gallery-heading-murray-studio').show();
+        $('#gallery-heading-murray-studio').addClass('fadeIn');
+        $('#gallery-murray-studio.back-container').addClass('fadeIn');
+
+        $('#image-gallery-murray-studio a').each(function () {
+            var $a = $(this);
+            setTimeout(function () {
+                $a.addClass('expandOpenEdit');
+            }, delay += 300); // delay 100 ms
+            //}
+        });
+    });
+
+
+    //click link button to expand gallery of images
+    $('#gallery-button-murray-studio').click(function () {
+        $("#forth-row.row.featurette").hide("slow");
+
+        $('#image-gallery-murray-studio').show();
+        $("#gallery-murray-studio.back-container").show();
+        $('#gallery-heading-murray-studio').show();
+        $('#gallery-heading-murray-studio').addClass('fadeIn');
+        $('#gallery-murray-studio.back-container').addClass('fadeIn');
+
+        $('#image-gallery-murray-studio a').each(function () {
+            var $a = $(this);
+            setTimeout(function () {
+                $a.addClass('expandOpenEdit');
+            }, delay += 300); // delay 100 ms
+            //}
+        });
+    });
+
+    //click back button to close image gallery and open row 4 again
+    $('#gallery-murray-studio.go-back').click(function () {
+        $("#image-gallery-murray-studio").hide("slow");
+        $("#gallery-murray-studio.back-container").hide("slow");
+        $("#gallery-heading-murray-studio").hide("slow");
 
         $('#forth-row.row.featurette').show();
         $('#forth-row.row.featurette').addClass('fadeIn');
 
     });
+    
+    /* BEGIN YOUTUBE VIDEO FOR STORY STUDIO GALLERY JS */
 
 
     //click link button to expand and play youtube video
@@ -119,6 +205,10 @@ var main = function () {
         ev.preventDefault();
 
     });
+    
+    
+    /* BEGIN NAVBAR RESPONSIVE UI SCALING ON SCROLLING JS */
+    
 
     $(window).scroll(function () {
 
@@ -296,15 +386,8 @@ var main = function () {
 
             shown = true;
         }
-
-        /*        $('#first.image').each(function () {
-                    var imagePos2 = $(this).offset().top;
-
-                    var topOfWindow = $(window).scrollTop();
-                    if (imagePos2 < topOfWindow + 500) {
-                        $('#first.image').addClass("slideLeft");
-                    }
-                });*/
+        
+        /* BEGIN ANIMATION OF IMAGES WHEN SCROLLING JS */
 
         $('#second.image').each(function () {
             var imagePos2 = $(this).offset().top;
@@ -337,7 +420,6 @@ var main = function () {
     });
 
     //if page loads in middle, load the animations without scolling
-
     $('#second.image').each(function () {
         var imagePos2 = $(this).offset().top;
 
