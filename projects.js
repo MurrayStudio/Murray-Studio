@@ -1,7 +1,10 @@
 var main = function () {
 
     var shown = false;
-    var delay = 0;
+    var delayGallery1 = 0;
+    var delayGallery2 = 0;
+    var delayGallery3 = 0;
+    var delayGallery4 = 0;
     var delay2 = 500;
     var topOfWindow = $(window).scrollTop();
     
@@ -58,7 +61,7 @@ var main = function () {
             var $a = $(this);
             setTimeout(function () {
                 $a.addClass('expandOpenEdit');
-            }, delay += 300); // delay 100 ms
+            }, delayGallery1 += 300); // delay 100 ms
             //}
         });
     });
@@ -78,7 +81,7 @@ var main = function () {
             var $a = $(this);
             setTimeout(function () {
                 $a.addClass('expandOpenEdit');
-            }, delay += 300); // delay 100 ms
+            }, delayGallery1 += 300); // delay 100 ms
             //}
         });
     });
@@ -125,26 +128,6 @@ var main = function () {
     });
 
 
-    //click hover button to expand gallery of images
-    $('#murray-studio-gallery.expand').click(function () {
-        $("#forth-row.row.featurette").hide("slow");
-
-        $('#image-gallery-murray-studio').show();
-        $("#gallery-murray-studio.back-container").show();
-        $('#gallery-heading-murray-studio').show();
-        $('#gallery-heading-murray-studio').addClass('fadeIn');
-        $('#gallery-murray-studio.back-container').addClass('fadeIn');
-
-        $('#image-gallery-murray-studio a').each(function () {
-            var $a = $(this);
-            setTimeout(function () {
-                $a.addClass('expandOpenEdit');
-            }, delay += 300); // delay 100 ms
-            //}
-        });
-    });
-
-
     //click link button to expand gallery of images
     $('#gallery-button-murray-studio').click(function () {
         $("#forth-row.row.featurette").hide("slow");
@@ -159,7 +142,7 @@ var main = function () {
             var $a = $(this);
             setTimeout(function () {
                 $a.addClass('expandOpenEdit');
-            }, delay += 300); // delay 100 ms
+            }, delayGallery2 += 300); // delay 100 ms
             //}
         });
     });
@@ -204,26 +187,6 @@ var main = function () {
     });
 
 
-    //click hover button to expand gallery of images
-    $('#story-studio-gallery.expand').click(function () {
-        $("#first-row.row.featurette").hide("slow");
-
-        $('#image-gallery-story-studio').show();
-        $("#gallery-story-studio.back-container").show();
-        $('#gallery-heading-story-studio').show();
-        $('#gallery-heading-story-studio').addClass('fadeIn');
-        $('#gallery-story-studio.back-container').addClass('fadeIn');
-
-        $('#image-gallery-story-studio a').each(function () {
-            var $a = $(this);
-            setTimeout(function () {
-                $a.addClass('expandOpenEdit');
-            }, delay += 300); // delay 100 ms
-            //}
-        });
-    });
-
-
     //click link button to expand gallery of images
     $('#gallery-button-story-studio').click(function () {
         $("#first-row.row.featurette").hide("slow");
@@ -238,7 +201,7 @@ var main = function () {
             var $a = $(this);
             setTimeout(function () {
                 $a.addClass('expandOpenEdit');
-            }, delay += 300); // delay 100 ms
+            }, delayGallery3 += 300); // delay 100 ms
             //}
         });
     });
@@ -251,6 +214,65 @@ var main = function () {
 
         $('#first-row.row.featurette').show();
         $('#first-row.row.featurette').addClass('fadeIn');
+
+    });
+    
+    /* BEGIN MURRAY STUDIO GALLERY JS */
+    
+                //define gallery container prefs
+    $('#image-gallery-risk').justifiedGallery({
+        rowHeight: 250,
+        maxRowHeight: 0,
+        minRowHeight: 230,
+        lastRow: 'nojustify',
+        rel: 'gallery1',
+        margins: 2,
+        sizeRangeSuffixes: {
+            lt100: '_t',
+            lt240: '_m',
+            lt320: '_n',
+            lt500: '',
+            lt640: '_z',
+            lt1024: '_b'
+        }
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth: '80%',
+            maxHeight: '80%',
+            opacity: 0.8,
+            transition: 'elastic',
+            current: ''
+        });
+    });
+
+
+    //click link button to expand gallery of images
+    $('#gallery-button-risk').click(function () {
+        $("#second-row.row.featurette").hide("slow");
+
+        $('#image-gallery-risk').show();
+        $("#gallery-risk.back-container").show();
+        $('#gallery-heading-risk').show();
+        $('#gallery-heading-risk').addClass('fadeIn');
+        $('#gallery-risk.back-container').addClass('fadeIn');
+
+        $('#image-gallery-risk a').each(function () {
+            var $a = $(this);
+            setTimeout(function () {
+                $a.addClass('expandOpenEdit');
+            }, delayGallery4 += 300); // delay 100 ms
+            //}
+        });
+    });
+
+    //click back button to close image gallery and open row 4 again
+    $('#gallery-risk.go-back').click(function () {
+        $("#image-gallery-risk").hide("slow");
+        $("#gallery-risk.back-container").hide("slow");
+        $("#gallery-heading-risk").hide("slow");
+
+        $('#second-row.row.featurette').show();
+        $('#second-row.row.featurette').addClass('fadeIn');
 
     });
     

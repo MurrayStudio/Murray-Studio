@@ -703,6 +703,41 @@ a.close-overlay.hidden {
 #gallery-story-studio.go-back:visited {
     color: #f46902;
 }
+
+/* Risk Gallery */
+
+#image-gallery-risk {
+    margin-top: 50px;
+    display: none;
+    visibility: hidden;
+}
+
+#gallery-heading-risk {
+    display: none;
+    visibility: hidden;
+    margin-top: 0px;
+}
+
+#gallery-risk.back-container {
+    position: relative;
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    margin-top: 1%;
+}
+
+#gallery-risk.go-back {
+    text-align: center;
+    color: #f46902;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-weight: 300;
+}
+
+#gallery-risk.go-back:visited {
+    color: #f46902;
+}
     
 
 /* Responsive CSS
