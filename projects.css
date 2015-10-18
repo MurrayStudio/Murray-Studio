@@ -227,10 +227,10 @@ button.navbar-toggle {
     width: auto;
 }
 /* ============================================================
-  Youtube Video
+  Youtube Videos
 ============================================================ */
 
-#video-container {
+#video-container-story-studio {
     position: relative;
     width: 100%;
     padding-bottom: 59%;
@@ -238,13 +238,13 @@ button.navbar-toggle {
     display: none;
 }
 
-#video {
+#video-story-studio {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-#video.back-container {
+#video-story-studio.back-container {
     position: relative;
     width: 100%;
     visibility: hidden;
@@ -253,7 +253,7 @@ button.navbar-toggle {
     display: flex;
 }
 
-#video.go-back {
+#video-story-studio.go-back {
     text-align: center;
     color: #f46902;
     width: 100%;
@@ -262,7 +262,45 @@ button.navbar-toggle {
     font-weight: 300;
 }
 
-#video.go-back:visited {
+#video-story-studio.go-back:visited {
+    color: #f46902;
+}
+
+/* Murray Studio Gallery */
+
+#video-container-murray-studio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 59%;
+    visibility: hidden;
+    display: none;
+}
+
+#video-murray-studio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#video-murray-studio.back-container {
+    position: relative;
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    margin-top: 1%;
+    display: flex;
+}
+
+#video-murray-studio.go-back {
+    text-align: center;
+    color: #f46902;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-weight: 300;
+}
+
+#video-murray-studio.go-back:visited {
     color: #f46902;
 }
 /* ============================================================
@@ -592,11 +630,11 @@ a.close-overlay.hidden {
     font-weight: 300;
 }
 
-/* Murray Studio Gallery */
-
 #gallery-graphic-design.go-back:visited {
     color: #f46902;
 }
+
+/* Murray Studio Gallery */
 
 #image-gallery-murray-studio {
     margin-top: 50px;
@@ -630,6 +668,43 @@ a.close-overlay.hidden {
 #gallery-murray-studio.go-back:visited {
     color: #f46902;
 }
+    
+/* Story Studio Gallery */
+
+#image-gallery-story-studio {
+    margin-top: 50px;
+    display: none;
+    visibility: hidden;
+}
+
+#gallery-heading-story-studio {
+    display: none;
+    visibility: hidden;
+    margin-top: 0px;
+}
+
+#gallery-story-studio.back-container {
+    position: relative;
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    margin-top: 1%;
+}
+
+#gallery-story-studio.go-back {
+    text-align: center;
+    color: #f46902;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-weight: 300;
+}
+
+#gallery-story-studio.go-back:visited {
+    color: #f46902;
+}
+    
+
 /* Responsive CSS
 -------------------------------------------------- */
 
