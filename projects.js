@@ -7,18 +7,20 @@ var main = function () {
     var delayGallery4 = 0;
     var delay2 = 500;
     var topOfWindow = $(window).scrollTop();
-    
-    var foo = function (input) { return input + 1; };
+
+    var foo = function (input) {
+        return input + 1;
+    };
 
     $('#title').addClass("expandOpenEdit");
 
     setTimeout(function () {
         $('#first.image').addClass("slideLeft");
     }, 500); // delay 100 ms
-    
-    
+
+
     /* BEGIN GRAPHIC DESIGN GALLERY JS */
-    
+
 
     //define gallery container prefs
     $('#image-gallery-graphic-design').justifiedGallery({
@@ -96,12 +98,12 @@ var main = function () {
         $('#fifth-row.row.featurette').addClass('fadeIn');
 
     });
-    
-    
+
+
     /* BEGIN MURRAY STUDIO GALLERY JS */
-    
-    
-        //define gallery container prefs
+
+
+    //define gallery container prefs
     $('#image-gallery-murray-studio').justifiedGallery({
         rowHeight: 430,
         maxRowHeight: 0,
@@ -157,10 +159,10 @@ var main = function () {
         $('#forth-row.row.featurette').addClass('fadeIn');
 
     });
-    
+
     /* BEGIN STORY STUDIO GALLERY JS */
-    
-            //define gallery container prefs
+
+    //define gallery container prefs
     $('#image-gallery-story-studio').justifiedGallery({
         rowHeight: 430,
         maxRowHeight: 0,
@@ -216,10 +218,10 @@ var main = function () {
         $('#first-row.row.featurette').addClass('fadeIn');
 
     });
-    
+
     /* BEGIN MURRAY STUDIO GALLERY JS */
-    
-                //define gallery container prefs
+
+    //define gallery container prefs
     $('#image-gallery-risk').justifiedGallery({
         rowHeight: 250,
         maxRowHeight: 0,
@@ -275,7 +277,7 @@ var main = function () {
         $('#second-row.row.featurette').addClass('fadeIn');
 
     });
-    
+
     /* BEGIN YOUTUBE VIDEO FOR STORY STUDIO GALLERY JS */
 
 
@@ -306,11 +308,11 @@ var main = function () {
         ev.preventDefault();
 
     });
-    
-    
+
+
     /* BEGIN YOUTUBE VIDEO FOR MURRAY STUDIO GALLERY JS */
-    
-        //click link button to expand and play youtube video
+
+    //click link button to expand and play youtube video
     $('#video-button-murray-studio').click(function () {
         $("#forth-row.row.featurette").hide("slow");
 
@@ -337,10 +339,10 @@ var main = function () {
         ev.preventDefault();
 
     });
-    
-    
+
+
     /* BEGIN NAVBAR RESPONSIVE UI SCALING ON SCROLLING JS */
-    
+
 
     $(window).scroll(function () {
 
@@ -518,7 +520,7 @@ var main = function () {
 
             shown = true;
         }
-        
+
         /* BEGIN ANIMATION OF IMAGES WHEN SCROLLING JS */
 
         $('#second.image').each(function () {
@@ -545,6 +547,15 @@ var main = function () {
             topOfWindow = $(window).scrollTop();
             if (imagePos2 < topOfWindow + 500) {
                 $('#forth.image').addClass("slideRight");
+            }
+        });
+
+        $('#fifth.image').each(function () {
+            var imagePos2 = $(this).offset().top;
+
+            topOfWindow = $(window).scrollTop();
+            if (imagePos2 < topOfWindow + 500) {
+                $('#fifth.image').addClass("slideLeft");
             }
         });
 
@@ -581,6 +592,17 @@ var main = function () {
         if (imagePos2 < topOfWindow + 500) {
             setTimeout(function () {
                 $('#forth.image').addClass("slideRight");
+            }, delay2 += 500);
+        }
+    });
+
+    $('#fifth.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            setTimeout(function () {
+                $('#fifth.image').addClass("slideLeft");
             }, delay2 += 500);
         }
     });
