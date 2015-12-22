@@ -198,6 +198,13 @@ button.navbar-toggle {
     border-top: 2px solid rgba(0, 0, 0, .2);
 }
 
+#row-6 {
+    background-color: #F4F4F4;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    border-top: 2px solid rgba(0, 0, 0, .2);
+}
+
 .lead a {
     color: #f46902;
 }

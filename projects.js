@@ -51,7 +51,7 @@ var main = function () {
 
     //click hover button to expand gallery of images
     $('#graphic-design-gallery.expand').click(function () {
-        $("#fifth-row.row.featurette").hide("slow");
+        $("#sixth-row.row.featurette").hide("slow");
 
         $('#image-gallery-graphic-design').show();
         $("#gallery-graphic-design.back-container").show();
@@ -71,7 +71,7 @@ var main = function () {
 
     //click link button to expand gallery of images
     $('#gallery-button-graphic-design').click(function () {
-        $("#fifth-row.row.featurette").hide("slow");
+        $("#sixth-row.row.featurette").hide("slow");
 
         $('#image-gallery-graphic-design').show();
         $("#gallery-graphic-design.back-container").show();
@@ -94,8 +94,8 @@ var main = function () {
         $("#gallery-graphic-design.back-container").hide("slow");
         $("#gallery-heading-graphic-design").hide("slow");
 
-        $('#fifth-row.row.featurette').show();
-        $('#fifth-row.row.featurette').addClass('fadeIn');
+        $('#sixth-row.row.featurette').show();
+        $('#sixth-row.row.featurette').addClass('fadeIn');
 
     });
 
@@ -559,6 +559,15 @@ var main = function () {
             }
         });
 
+        $('#sixth.image').each(function () {
+            var imagePos2 = $(this).offset().top;
+
+            topOfWindow = $(window).scrollTop();
+            if (imagePos2 < topOfWindow + 500) {
+                $('#sixth.image').addClass("slideRight");
+            }
+        });
+
 
     });
 
@@ -603,6 +612,17 @@ var main = function () {
         if (imagePos2 < topOfWindow + 500) {
             setTimeout(function () {
                 $('#fifth.image').addClass("slideLeft");
+            }, delay2 += 500);
+        }
+    });
+
+    $('#sixth.image').each(function () {
+        var imagePos2 = $(this).offset().top;
+
+        topOfWindow = $(window).scrollTop();
+        if (imagePos2 < topOfWindow + 500) {
+            setTimeout(function () {
+                $('#sixth.image').addClass("slideRight");
             }, delay2 += 500);
         }
     });
