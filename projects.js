@@ -46,6 +46,8 @@ var main = function () {
             transition: 'elastic',
             current: ''
         });
+        
+        console.log("complete");
     });
 
 
